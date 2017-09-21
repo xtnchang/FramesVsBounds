@@ -34,20 +34,28 @@ class ViewController: UIViewController {
     updateValues()
   }
 
+  // Moves the gray square relative to the screen.
   @IBAction func frameSliderChanged(_ sender: AnyObject) {
+    containerView.frame.origin.x = CGFloat(frameSlider.value)
     updateValues()
   }
 
+  // Moves the gray square relative to its current position. i.e., wherever it current sits on the screen, that's its (0,0). It's a moving origin.
+  // The bounds encompasses the child view?
   @IBAction func boundsSliderChanged(_ sender: AnyObject) {
+    containerView.bounds.origin.x = CGFloat(boundsSlider.value)
     updateValues()
   }
 
-
+  // Moves the gray square relative to the screen.
   @IBAction func frameYSliderChanged(_ sender: AnyObject) {
+    containerView.frame.origin.y = CGFloat(frameYSlider.value)
     updateValues()
   }
 
+  // Moves the gray square relative to its current position. i.e., wherever it current sits on the screen, that's its (0,0). It's a moving origin.
   @IBAction func boundsYSliderChanged(_ sender: AnyObject) {
+    containerView.bounds.origin.y = CGFloat(boundsYSlider.value)
     updateValues()
   }
 
